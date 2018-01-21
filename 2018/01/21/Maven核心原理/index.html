@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="项目构建," />
 
 
 
@@ -79,16 +79,26 @@
 
 
 
-<meta name="description" content="In me the tiger sniffs the rose">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sakura&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="原文链接：阅读原文Maven 是每一位Java工程师每天都会接触的工具, 但据我所知其实很多人对Maven理解的并不深, 只把它当做一个依赖管理工具(下载依赖、打包), Maven很多核心的功能反而没用上. 最近重读 Maven实战, 虽然这本书年岁较老(10年出版: 那还是Hudson年代), 但绝大部分还是很值得参考的. 本文讲述Maven的核心原理和概念, 因此还是大纲参考了这本书, 但细节">
+<meta name="keywords" content="项目构建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maven核心原理">
+<meta property="og:url" content="http://yoursite.com/2018/01/21/Maven核心原理/index.html">
 <meta property="og:site_name" content="sakura&#39;s blog">
-<meta property="og:description" content="In me the tiger sniffs the rose">
+<meta property="og:description" content="原文链接：阅读原文Maven 是每一位Java工程师每天都会接触的工具, 但据我所知其实很多人对Maven理解的并不深, 只把它当做一个依赖管理工具(下载依赖、打包), Maven很多核心的功能反而没用上. 最近重读 Maven实战, 虽然这本书年岁较老(10年出版: 那还是Hudson年代), 但绝大部分还是很值得参考的. 本文讲述Maven的核心原理和概念, 因此还是大纲参考了这本书, 但细节">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/img/28112555.jpg">
+<meta property="og:image" content="http://yoursite.com/img/88106006.jpg">
+<meta property="og:image" content="http://yoursite.com/img/98066077.jpg">
+<meta property="og:image" content="http://yoursite.com/img/42555049.jpg">
+<meta property="og:image" content="http://yoursite.com/img/11428307.jpg">
+<meta property="og:image" content="http://yoursite.com/img/44727861.jpg">
+<meta property="og:image" content="http://yoursite.com/img/32180080.jpg">
+<meta property="og:updated_time" content="2018-01-21T15:17:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sakura&#39;s blog">
-<meta name="twitter:description" content="In me the tiger sniffs the rose">
+<meta name="twitter:title" content="Maven核心原理">
+<meta name="twitter:description" content="原文链接：阅读原文Maven 是每一位Java工程师每天都会接触的工具, 但据我所知其实很多人对Maven理解的并不深, 只把它当做一个依赖管理工具(下载依赖、打包), Maven很多核心的功能反而没用上. 最近重读 Maven实战, 虽然这本书年岁较老(10年出版: 那还是Hudson年代), 但绝大部分还是很值得参考的. 本文讲述Maven的核心原理和概念, 因此还是大纲参考了这本书, 但细节">
+<meta name="twitter:image" content="http://yoursite.com/img/28112555.jpg">
 
 
 
@@ -118,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/21/Maven核心原理/"/>
 
 
 
 
 
-  <title>sakura's blog</title>
+  <title>Maven核心原理 | sakura's blog</title>
   
 
 
@@ -143,8 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -247,9 +256,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -279,9 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/21/Maven核心原理/" itemprop="url">Maven核心原理</a></h1>
+          <h1 class="post-title" itemprop="name headline">Maven核心原理</h1>
         
 
         <div class="post-meta">
@@ -331,9 +338,7 @@
       
 
       
-        
-          
-            <p>原文链接：<a href="http://blog.csdn.net/zjf280441589/article/details/53044308" target="_blank" rel="noopener">阅读原文</a><br>Maven 是每一位Java工程师每天都会接触的工具, 但据我所知其实很多人对Maven理解的并不深, 只把它当做一个依赖管理工具(下载依赖、打包), Maven很多核心的功能反而没用上. 最近重读 Maven实战, 虽然这本书年岁较老(10年出版: 那还是Hudson年代), 但绝大部分还是很值得参考的. 本文讲述Maven的核心原理和概念, 因此还是大纲参考了这本书, 但细节大多参考的Maven的官方文档以及网友释出的博客. 本文主要讲解Maven的:</p>
+        <p>原文链接：<a href="http://blog.csdn.net/zjf280441589/article/details/53044308" target="_blank" rel="noopener">阅读原文</a><br>Maven 是每一位Java工程师每天都会接触的工具, 但据我所知其实很多人对Maven理解的并不深, 只把它当做一个依赖管理工具(下载依赖、打包), Maven很多核心的功能反而没用上. 最近重读 Maven实战, 虽然这本书年岁较老(10年出版: 那还是Hudson年代), 但绝大部分还是很值得参考的. 本文讲述Maven的核心原理和概念, 因此还是大纲参考了这本书, 但细节大多参考的Maven的官方文档以及网友释出的博客. 本文主要讲解Maven的:</p>
 <ul>
 <li>坐标与依赖</li>
 <li>仓库</li>
@@ -579,8 +584,6 @@
 </tbody>
 </table>
 
-          
-        
       
     </div>
     
@@ -595,142 +598,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sakura">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/goddess.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="sakura's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/20/hello-world/" itemprop="url">Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-20T15:38:48+08:00">
-                2018-01-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/项目构建/" rel="tag"># 项目构建</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/20/hello-world/" rel="next" title="Hexo">
+                <i class="fa fa-chevron-left"></i> Hexo
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -740,10 +637,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -751,6 +649,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -771,8 +673,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -827,6 +738,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标与依赖"><span class="nav-number">1.</span> <span class="nav-text">坐标与依赖</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#坐标"><span class="nav-number">1.1.</span> <span class="nav-text">坐标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖"><span class="nav-number">1.2.</span> <span class="nav-text">依赖</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven-仓库"><span class="nav-number">2.</span> <span class="nav-text">Maven 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两类仓库"><span class="nav-number">2.1.</span> <span class="nav-text">两类仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#私服"><span class="nav-number">2.2.</span> <span class="nav-text">私服</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仓库搜索"><span class="nav-number">2.3.</span> <span class="nav-text">仓库搜索</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期与插件"><span class="nav-number">3.</span> <span class="nav-text">生命周期与插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#生命周期"><span class="nav-number">3.1.</span> <span class="nav-text">生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">3.2.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内置绑定"><span class="nav-number">3.2.1.</span> <span class="nav-text">内置绑定</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -967,6 +894,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
